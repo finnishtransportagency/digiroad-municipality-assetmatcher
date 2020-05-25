@@ -10,6 +10,10 @@ app.post('/', async (request, response) => {
   response.send(matchedFeature)
 })
 
+app.get('/alive', (req, res) => {
+  res.send({ status: 'ok' })
+})
+
 const PORT = process.env.PORT || 3000
 
 if (process.env.NODE_ENV !== 'test') {
