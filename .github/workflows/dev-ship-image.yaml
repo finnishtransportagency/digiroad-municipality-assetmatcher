@@ -21,3 +21,4 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: ${{ secrets.DOCKER_REPO }}
           tag_with_sha: true
+          buildoptions: '--target prod'
