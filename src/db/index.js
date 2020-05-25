@@ -18,7 +18,9 @@ pool.connect((err, client) => {
   if (err) {
     console.error('Error While connecting to postgres:', err)
   } else {
-    console.log(`Postgres connected: ${host}:${port}`)
+    if (process.env.NODE_ENV !== 'test') {
+      console.log(`Postgres connected: ${host}:${port}`)
+    }
   }
 })
 

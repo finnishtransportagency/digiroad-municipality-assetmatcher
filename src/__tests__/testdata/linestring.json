@@ -1,0 +1,22 @@
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "LineString",
+    "coordinates": [
+      [390531.355788, 6685503.72725, 0],
+      [390324.657666, 6685577.48872, 0],
+      [390149.567429, 6685596.98163, 0],
+      [389894.59267, 6685604.67455, 0],
+      [389729.677084, 6685607.28968, 0]
+    ]
+  },
+  "properties": {
+    "type": "Roadlink",
+    "id": 46557473,
+    "name": "Mannerheimintie",
+    "functionalClass": "Katu",
+    "speedLimit": "40",
+    "pavementClass": "1",
+    "sideCode": 1
+  }
+}

@@ -1,0 +1,4 @@
+node_modules
+.github
+.ds_store
+docker-compose.yaml

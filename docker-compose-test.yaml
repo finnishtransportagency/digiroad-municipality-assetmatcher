@@ -1,0 +1,20 @@
+version: '2.4'
+services:
+  asset-matcher:
+    build:
+      context: .
+      target: test
+    environment:
+      PG_PASSWORD: superSecret
+      PG_HOST: postgres
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  postgres:
+    image: tommilehtisaari/digiroad-db:5_2019_uusimaa_2
+    environment:
+      POSTGRES_PASSWORD: superSecret
+      POSTGRES_DB: 'dr_r'
+    healthcheck:
+      test: pg_isready -h 127.0.0.1

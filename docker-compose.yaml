@@ -1,0 +1,14 @@
+version: '2.4'
+services:
+  pgRouting:
+    image: tommilehtisaari/digiroad-db:5_2019_uusimaa_2
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: 'dr_r'
+    volumes:
+      - digiroadPostgres:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
+volumes:
+  digiroadPostgres:
