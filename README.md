@@ -104,6 +104,12 @@ An example response body:
 }
 ```
 
+## Continuous Integration
+
+Currently this project is using GitHub Actions to perform automated testing with docker-compose and shipps images to registery. This pipeline is triggered when you make a `pull_request` or `push` to development branch. This can be configured later to respond other branches as well. A new Image is shipped with a tag representing 8 digits of commit sha.
+
+Suggestion: In future version tagged `v0.0.1` release branches could be merged into master which triggers a production build on and tags it with github tag. This tag can be later used in continuous delivery systems (Flux) later with regex to determinene production deployments.
+
 ## GeoJSON
 
 GeoJSON is a very intuitive format and most of the modern GIS tools are able to handle transform their native data to GeoJSON and vice versa. If you are developing GeoJSON yourself at some point in your data pipeline you can reference [RFC-7946](https://tools.ietf.org/html/rfc7946) specification which is the official specification.
