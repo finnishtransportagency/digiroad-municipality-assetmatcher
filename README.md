@@ -61,7 +61,7 @@ The usage of this is meant to be as simple as possible. The Matcher accepts one 
 Like this:
 
 ```json
-	{
+{
       "type": "Feature",
       "geometry": {
         "type": "LineString",
